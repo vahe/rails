@@ -1248,7 +1248,6 @@ module ActiveRecord
       attribute_names = attributes_for_create(attribute_names)
 
       returning_columns = self.class._returning_columns_for_insert
-
       returning_values = self.class._insert_record(
         attributes_with_values(attribute_names),
         returning_columns

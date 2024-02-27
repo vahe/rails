@@ -194,6 +194,7 @@ module ActiveRecord
       end
 
       def initialize_attributes(record, except_from_scope_attributes = nil) # :nodoc:
+
         except_from_scope_attributes ||= {}
         skip_assign = [reflection.foreign_key, reflection.type].compact
         assigned_keys = record.changed_attribute_names_to_save
